@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import CartTotal from "./CartDisplay/CartTotal/CartTotal";
-import Options from "./Options/Options";
-
+import './App.css';
+import MainContent from "./MainContent/MainContent";
+import MainForm from "./MainForm/MainForm";
+import Header from './Header/Header'
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 import slugify from 'slugify';
-
-import './App.css';
-import CartDisplay from "./CartDisplay/CartDisplay";
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -51,19 +49,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Header />
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
-            <Options selected={this.state.selected} USCurrencyFormat= {USCurrencyFormat} features={this.props.features} updateFeature={this.updateFeature} />
-          </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            <CartDisplay selected={this.state.selected} USCurrencyFormat= {USCurrencyFormat} />
-            <CartTotal selected={this.state.selected} USCurrencyFormat= {USCurrencyFormat} />
-          </section>
+          <MainForm selected={this.state.selected} USCurrencyFormat= {USCurrencyFormat} features={this.props.features} updateFeature={this.updateFeature} />
+          <MainContent selected={this.state.selected} USCurrencyFormat= {USCurrencyFormat} />
         </main>
       </div>
     );

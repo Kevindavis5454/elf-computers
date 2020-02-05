@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import slugify from "slugify";
 
-class Options extends Component {
-
-    render() {
+class Features extends Component {
+    render () {
         const features = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             const options = this.props.features[feature].map(item => {
@@ -40,4 +39,5 @@ class Options extends Component {
     }
 }
 
-export default Options
+
+export default Features
