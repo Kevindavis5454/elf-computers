@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import slugify from "slugify";
 
-class Features extends Component {
+class MainContent extends Component {
     render () {
         const features = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
@@ -33,11 +33,15 @@ class Features extends Component {
                 </fieldset>
             );
         });
-        return (
-            features
-        )
-    }
+
+    return (
+        <form className="main__form">
+            <h2>Customize your laptop</h2>
+            {features}
+            {/*<Options selected={this.props.selected} USCurrencyFormat= {this.props.USCurrencyFormat}  features={this.props.features} updateFeature={this.props.updateFeature} />*/}
+        </form>
+
+)}
 }
 
-
-export default Features
+export default MainContent

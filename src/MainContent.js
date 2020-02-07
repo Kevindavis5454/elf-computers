@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CartDisplay from "./CartDisplay/CartDisplay";
-import CartTotal from "./CartDisplay/CartTotal/CartTotal";
+import CartDisplay from "./CartDisplay";
+import CartTotal from "./CartTotal";
 
 class MainForm extends Component {
     render () {

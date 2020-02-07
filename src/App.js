@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainContent from "./MainContent/MainContent";
-import MainForm from "./MainForm/MainForm";
-import Header from './Header/Header'
+import MainContent from "./MainContent";
+import MainForm from "./MainForm";
+import Header from './Header'
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
