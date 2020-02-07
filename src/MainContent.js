@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CartDisplay from "./CartDisplay";
 import CartTotal from "./CartTotal";
 
-class MainForm extends Component {
+class MainContent extends Component {
     render () {
 
         return (
@@ -15,4 +15,4 @@ class MainForm extends Component {
         )}
 }
 
-export default MainForm
+export default MainContent
